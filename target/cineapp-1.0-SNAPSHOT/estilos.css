@@ -1,0 +1,764 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 24 may de 2024, 11:14:39
+    Author     : JAVIER APAZA
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+/*SCROLL*/
+/* Estilo para WebKit (Chrome, Safari) */
+/* Contenedor principal */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+    height: 12px; /* Altura de la barra de desplazamiento */
+    background-color: black; /* Color de fondo de la barra de desplazamiento */
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #141414; /* Color de la barra de desplazamiento */
+    border-radius: 5px; /* Radio del borde */
+    border: 0px solid #4e4e4e11; /* Borde de la barra de desplazamiento */
+}
+
+/* Pista (track) */
+::-webkit-scrollbar-track {
+    background-color: #000000; /* Color de la pista */
+    border-radius: 6px; /* Radio del borde de la pista */
+}
+
+
+
+
+/*CABEZERA*/
+
+
+.divHeader{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    /* background: red; */
+}
+
+
+.divHI{
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 50%;;
+}
+
+.divHD{
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 50%;
+}
+
+a{
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/*CUERPO DETALLE DE PELICULA*/
+.divCuerpo{
+    width: 100%;
+    height: 585px;
+    
+    /*height: 100vh;*/
+    /* background: pink; */
+    display: flex;
+}
+
+.divFondoDetalle{
+    background: url("recursos/captainMarvel.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.divDegradadoDetalle{
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 22%, rgba(0, 0, 0, 0.5) 42%, rgba(0, 0, 0, 0.2) 64%, rgba(0, 0, 0, 0.9) 100%);
+    height: 100%;
+}
+
+.divCI{
+    width: 50%;
+    height: 100%;
+    /* background: blue; */
+    position: relative;
+}
+
+
+.divContenedorD{
+    width: 68%;
+    height: 320px;
+    /* background: gray; */
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#h1TituloP{
+    color: #FFFFFF;
+    font-size: 32px;
+}
+#h4DetallesP{
+    color: #DEB112;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+#pSinopsis{
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 1.3;
+
+    /* background: red; */
+}
+
+.divDetalle{
+    /* background: violet; */
+    margin-left: 60px;
+    height: 224px;
+}
+
+.divDPS{
+    /* background: green; */
+    height: 157px;
+    display: flex;
+    padding-top: 10px;
+}
+
+.divDPSB{
+    /* background: orange; */
+    padding-left: 12px;
+}
+
+#divSinopsis{
+    /* background: gray; */
+    height: 127px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*arreglar*/
+img{
+    width: 150px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #000000;
+}
+/* 
+p{
+    height: 80%;
+} */
+
+button{
+    height: 20%;
+}
+
+.divCD{
+    width: 50%;
+    height: 100%;
+    /* background: orange; */
+    position: relative;
+}
+
+/*Contenedor Detalle derecha portadas*/
+.divContenedorP{
+    width: 70%;
+    height: 25%;
+    /* background: gray; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*arreglar: trabajar con tamaños fijos*/
+.imgR{
+    width: 100px;
+    height: 92%;
+    margin: 2px;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 20px #000000;
+}
+
+
+
+
+
+
+
+
+
+
+/*CUERPO INDEX*/
+
+.divFondoIndex{
+    background: url("recursos/captainMarvel.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.divDegradadoIndex{
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 22%, rgba(0, 0, 0, 0.5) 42%, rgba(0, 0, 0, 0.2) 64%, rgba(0, 0, 0, 0.9) 100%);
+}
+/******************************************************************************************************************************************************************************************************/
+
+.divCP{
+    width: 100%;
+    /* height: 570px; */
+    height: 490px;
+    /* background: cyan; */
+}
+
+/**/
+
+.divCuerpoIndex{
+    background: black;
+}
+
+.h2TituloCartelera{
+    padding-left: 70px;
+    /* background: green; */
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.aImagen{
+    margin: 0;
+}
+
+.divCartelera{
+    width: 100%;
+    height: 250px;
+    /* background: orange; */
+}
+
+.divCPortadas{ /*igual en las 3*/
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.divEstreno{
+    width: 100%;
+    height: 250px;
+    /* background: pink; */
+}
+
+.divProximamente{
+    width: 100%;
+    height: 250px;
+    /* background: green; */
+}
+
+.divFooter{
+    width: 100%;
+    height: 80px;
+    background: black;
+}
+
+.imgPortadaI{
+    width: 120px;
+    height: 160px;
+    margin: 12px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 20px #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*CUERPO COMPRA*/
+
+.divDegradadoCompra{
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 22%, rgba(0, 0, 0, 0.5) 42%, rgba(0, 0, 0, 0.4) 64%, rgba(0, 0, 0, 0.9) 100%);
+    height: 100%
+}
+
+#divContenedorAsientos{
+    height: 100%;
+    width: 572px;
+
+    /* background: black; */
+    margin-left: 20px;
+}
+
+
+.divRelleno{
+    width: 100%;
+    height: 80px;
+}
+
+.divCompraP{
+    /* background: orange; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgCompra{
+    height: 60%;
+    width: auto;
+    border-radius: 10px;
+
+    margin-left: 40px;
+
+    box-shadow: 0px 0px 20px #000000;
+}
+
+.divCompraA{ /*contenedor de pantalla B de ASIENTOS*/
+    /* background: cyan; */
+    width: 60%;
+    height: 100%;
+}
+
+.divRellenoCA{
+    height: 20%;/*------------------------------------*/
+    width: 100%;
+    /* background: red; */
+}
+
+.divPantalla{
+    /* background: gray; */
+    width: 100%;
+    height: 10%; /*------------------------------------*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divPantallaDiseño{
+    background: #DEB112;
+    width: 572px;
+    height: 10px;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 30px #000000;
+
+}
+
+.h1TituloPantalla{
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    text-shadow: 0px 0px 3px #000000;
+}
+
+.divAsientosCasillas{
+    width: 100%;
+    height: 40%; /*------------------------------------*/
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divCajaCasillas{
+    width: 572px;
+    height: 208px;
+    /* background: orange; */
+
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.divCasilla{
+    /*26px*/
+    width: 20px;
+    height: 20px;
+    background: #D9D9D9;
+    margin: 3px;
+
+    border-radius: 5px;
+}
+
+.divCasillaTransparente{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+
+}
+
+#divFondoOscuro{
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+/*****************************************/
+#divAlerta{
+    display: none;
+    background: #141414;
+    border-radius: 10px;
+
+    color: #FFFFFF;
+
+    width: 300px;
+    height: 200px;
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#pAlerta{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#h2Asiento{
+    color: #DEB112;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#btnCancelar{
+    margin-right: 6px;
+
+
+    color: #C62D40;
+    background: none;
+    border: 1px solid #C62D40;
+}
+
+#btnConfirmar{
+    margin-left: 6px;
+}
+/*****************************************/
+
+
+.divAsientosInfo{
+    width: 100%;
+    height: 28%;/*------------------------------------*/
+    /* background-color: purple; */
+
+    padding-top: 2%;
+
+
+}
+
+.divAIDOS{
+    width: 100%;
+
+    display: flex;
+    /* background: violet; */
+    justify-content: center;
+    align-items: center;
+}
+
+.h1TituloPantalla{
+    font-size: 12px;
+    font-weight: 100;
+    color: #FFFFFF;
+}
+
+.pText{
+    font-size: 12px;
+    font-weight: 100;
+    color: #FFFFFF;
+    margin-right: 50px;
+}
+
+.pTextUltimo{
+    font-size: 12px;
+    font-weight: 100;
+    color: #FFFFFF;
+}
+
+.divCDisponible{
+    width: 20px;
+    height: 20px;
+    background: #D9D9D9;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.divCOcupado{
+    width: 20px;
+    height: 20px;
+    background: #4E4E4E;
+    margin: 3px;
+
+    border-radius: 5px;
+}
+
+.divCSeleccionado{
+    width: 20px;
+    height: 20px;
+    background: #DEB112;
+    margin: 3px;
+
+    border-radius: 5px;
+}
+
+.divBtnContinuar{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    /* background: green; */
+}
+
+.btnRojo{
+    border: none;
+    background: #C62D40;
+    color: #FFFFFF;
+    height: 30px;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+/*LOGIN*/
+.divFondoI{
+    background: url("recursos/login.jpg");
+    background-size: cover;
+    background-position: 230px center;
+    height: 100%;
+}
+
+.divDegradado{
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 22%, rgba(0, 0, 0, 0.9) 42%, rgba(0, 0, 0, 0.8) 64%, rgba(0, 0, 0, 0) 100%);
+    height: 100%;
+}
+
+#tituloLogin{
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-size: 24px;
+    
+    /* font-family: "Inter", sans-serif; */
+}
+
+span{
+    color: #DEB112;
+}
+
+.divForm{
+    /* background: blue; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divCajaForm{
+    /* background: green; */
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 22%, rgba(0, 0, 0, 0.9) 42%, rgba(0, 0, 0, 0.8) 64%, rgba(0, 0, 0, 0) 100%); */
+    width: 300px;
+    height: auto;
+}
+
+label{
+    font-weight: normal;
+    color: #FFFFFF;
+    font-size: 12px;
+
+    font-weight: 300;
+}
+
+input{
+    background: #878787;
+    width: 280px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+
+    margin-top: 2px;
+    margin-bottom: 12px;
+
+    font-weight: 600;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.divApellidos{
+    display: flex;
+}
+
+.divCajaApellidos{
+    width: 48%;
+}
+
+.iAp{
+    width: 120px;
+}
+
+#cajaAM, #cajaAI{
+    margin-left: 20px;
+}
+
+.divFormBotones{
+    /* background: cyan; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.aCuenta{
+    color: #DEB112;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: 0;
+}
+
+#btnLogin{
+    width: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 0;
+}
+
+
+/*TEXT AREA*/
+textarea{
+    background: #878787;
+    width: 280px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+
+    margin-top: 2px;
+    margin-bottom: 12px;
+
+    font-weight: 600;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    resize: none;
+}
+
+select{
+    background: #878787;
+    width: 300px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+
+    margin-top: 2px;
+    margin-bottom: 12px;
+
+    font-weight: 600;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.iFileImagen{
+    background: #87878780;
+    width: 134px;
+    height: 70px;
+    border: 3px dashed #878787;
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2px;
+    margin-bottom: 12px;
+
+    font-weight: 600;
+    font-size: 12px;
+ 
+    position: relative;
+}
+
+#pInput, #pInputP{
+    width: auto;
+    height: auto;
+    color: #878787;
+    margin-top: 15px;
+}
+
+#sInput, #sInputP{
+    font-size: 12px;
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.iImagenes{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
