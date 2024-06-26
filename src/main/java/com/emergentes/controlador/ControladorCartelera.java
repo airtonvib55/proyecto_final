@@ -102,7 +102,7 @@ public class ControladorCartelera extends HttpServlet {
             System.out.println("ERROR CONSULTA");
         }
         System.out.println("GUARDADO");
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("ControladorHome");
     }
 
 }

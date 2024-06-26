@@ -34,25 +34,6 @@
                             <img class="imgPortadaI" src="recursos/${item.getRuta_poster()}" alt="">
                         </a>
                     </c:forEach>
-
-<!--                    <a href="ControladorDetalles?action=view&id=1" class="aImagen">
-                        <img class="imgPortadaI" src="recursos/captainP.jpg" alt="">
-                    </a>
-                    <a href="detalles.jsp" class="aImagen">
-                        <img class="imgPortadaI" src="recursos/garfield.png" alt="">
-                    </a>
-                    <a href="detalles.jsp" class="aImagen">
-                        <img class="imgPortadaI" src="recursos/interestlarP.jpg" alt="">
-                    </a>
-                    <a href="detalles.jsp" class="aImagen">
-                        <img class="imgPortadaI" src="recursos/kunfupanda.png" alt="">
-                    </a>
-                    <a href="detalles.jsp" class="aImagen">
-                        <img class="imgPortadaI" src="recursos/spiderman3.jpg" alt="">
-                    </a>
-                    <a href="detalles.jsp" class="aImagen">
-                        <img class="imgPortadaI" src="recursos/dumboposter.png" alt="">
-                    </a>-->
                 </div>
 
             </div>

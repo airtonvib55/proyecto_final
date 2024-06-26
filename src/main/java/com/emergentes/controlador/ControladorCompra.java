@@ -89,6 +89,7 @@ public class ControladorCompra extends HttpServlet {
             case "view":
                 int id = Integer.parseInt(request.getParameter("id"));
                 Peliculas peli = new Peliculas();
+                System.out.println("VIEW:");
                 System.out.println("ID: " + id);
                 try {
                     Class.forName(driver);
@@ -170,12 +171,12 @@ public class ControladorCompra extends HttpServlet {
                     String horaFun = listaHoras.get(0).getHora_funcion();
                     System.out.println("Hora funcion: " + horaFun);
                     //id_funcion se elegira en base a la fecha y hora
-                    //String sqls = "select * from asientos_reserva where id_funcion = 1 order by posicion_fila, posicion_columna";
-                    String sqls = "select * from asientos_reserva where id_funcion = (select id_funcion from funcion where fecha_funcion = ? and hora_funcion = ?) order by posicion_fila, posicion_columna";
+                    String sqls = "select * from asientos_reserva where id_funcion = (select id_funcion from funcion where fecha_funcion = ? and hora_funcion = ? and id_pelicula = ?) order by posicion_fila, posicion_columna";
                     PreparedStatement pr;
                     pr = conn.prepareStatement(sqls);
                     pr.setDate(1, fechaFun);
                     pr.setString(2, horaFun);
+                    pr.setInt(3, id);
 
                     ResultSet rs = pr.executeQuery();
 

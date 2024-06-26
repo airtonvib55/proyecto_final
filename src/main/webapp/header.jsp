@@ -8,8 +8,11 @@
 <!DOCTYPE html>
 <div class="divHeader">
     <div class="divHI">
-        <a href="home.jsp">Logo</a>
-        <a href="home.jsp">cineStar</a>
+        <a href="ControladorHome">Logo</a>
+        <a href="ControladorHome">cineStar</a>
+        <a href="publicar.jsp">Añadir pelicula</a>
+        <a href="ControladorFuncion">Añadir funcion</a>
+        <a href="ControladorCartelera">Añadir a cartelera</a>
     </div>
     <div class="divHD">
         <a href="buscar.jsp">Buscar</a>

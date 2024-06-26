@@ -22,8 +22,8 @@
             <div class="divDegradado">
                 <div class="divHeader">
                     <div class="divHI">
-                        <a href="home.jsp">Logo</a>
-                        <a href="home.jsp">cineStar</a>
+                        <a href="ControladorHome">Logo</a>
+                        <a href="ControladorHome">cineStar</a>
                     </div>
                     <div class="divHD">
                         <a href="buscar.jsp">Buscar</a>

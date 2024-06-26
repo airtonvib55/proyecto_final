@@ -9,7 +9,6 @@ com\emergentes\cineapp\JakartaRestConfiguration.class
 com\emergentes\cineapp\resources\JakartaEE8Resource.class
 com\emergentes\controlador\ControladorUsuario.class
 com\emergentes\controlador\ControladorHome.class
-com\emergentes\controlador\ServletForm.class
 com\emergentes\modelo\Peliculas.class
 com\emergentes\controlador\ControladorCompra.class
 com\emergentes\controlador\ControladorDetalles.class
