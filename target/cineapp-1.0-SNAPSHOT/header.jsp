@@ -8,8 +8,8 @@
 <!DOCTYPE html>
 <div class="divHeader">
     <div class="divHI">
-        <a href="index.jsp">Logo</a>
-        <a href="index.jsp">cineStar</a>
+        <a href="home.jsp">Logo</a>
+        <a href="home.jsp">cineStar</a>
     </div>
     <div class="divHD">
         <a href="buscar.jsp">Buscar</a>

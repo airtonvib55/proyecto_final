@@ -1,9 +1,14 @@
-<%-- 
-    Document   : detalles
-    Created on : 24 may de 2024, 11:25:47
-    Author     : JAVIER APAZA
---%>
+<%@page import="com.emergentes.modelo.Peliculas"%>
+<%
+    /*
+    if (session.getAttribute("login") != "ok") {
+        response.sendRedirect("iniciarc.jsp");
+    }*/
 
+    Peliculas peli = new Peliculas();
+    peli = (Peliculas) request.getAttribute("pelicula");
+
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,30 +22,29 @@
 
     <body>
 
-        <div class="divFondoDetalle">
+        <div class="divFondoDetalle" id="divFondoImagen">
             <div class="divDegradadoDetalle">
-                
-                <%@include file="header.jsp"%>
-                <!-- <div class="divRelleno"></div> -->
 
+                <%@include file="header.jsp"%>
                 <div class="divCuerpo">
                     <div class="divCI">
+
+                        <div class="divTituloPeli">
+                            <h1 id="h1TituloPeli"><%=peli.getNombre_p()%></h1>
+                        </div>
+
+
                         <div class="divContenedorD">
                             <div class="divDetalle">
-                                <h1 id="h1TituloP">Pokemon Detective Pikachu</h1>
-                                <h4 id="h4DetallesP">Genero | Edad | Duracion</h4>
+                                <h4 id="h4DetallesP"><%=peli.getGenero()%> | Edad | <%=peli.getDuracion()%> min.</h4>
                                 <div class="divDPS">
-                                    <img class="imgPortada" src="recursos/captainP.jpg" alt="">
+                                    <img class="imgPortada" src="recursos/<%=peli.getRuta_poster()%>" alt="">
                                     <div class="divDPSB">
                                         <div id="divSinopsis">
-                                            <p id="pSinopsis">Un joven une fuerzas con el detective Pikachu
-                                                para desentrañar el misterio detrás de la
-                                                desaparición de su padre. El dúo dinámico
-                                                descubre una trama tortuosa que representa
-                                                una amenaza para el universo Pokémon.</p>
+                                            <p id="pSinopsis"><%=peli.getSinopsis()%></p>
                                         </div>
 
-                                        <a href="compra.jsp" class="aImagen">
+                                        <a href="ControladorCompra?action=view&id=<%=peli.getId_pelicula()%>" class="aImagen">
                                             <button class="btnRojo">Ver horarios</button>
                                         </a>
                                     </div>
@@ -70,6 +74,10 @@
 
             </div>
         </div>
+        <script>
+            let divFondoImagen = document.getElementById("divFondoImagen");
+            divFondoImagen.style.backgroundImage = "url(recursos/<%=peli.getRuta_portada()%>)";
+        </script>
     </body>
 
 </html>

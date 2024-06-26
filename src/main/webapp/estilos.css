@@ -90,7 +90,7 @@ a{
 }
 
 .divFondoDetalle{
-    background: url("recursos/captainMarvel.jpg");
+    /*background: url("recursos/portadas/ynPortada.jpg");*/
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -104,20 +104,40 @@ a{
 .divCI{
     width: 50%;
     height: 100%;
-    /* background: blue; */
+    /*background: blue;*/
     position: relative;
 }
 
 
+.divTituloPeli {
+    width: 68%;
+
+    /*background: red;*/
+
+    position: absolute;
+    bottom: 283px; /* Esto coloca el div justo encima del divContenedorD */
+    left: 0;
+}
+#h1TituloPeli{
+    color: #FFFFFF;
+    font-size: 32px;
+    margin-left: 60px;
+}
+
+
+
 .divContenedorD{
     width: 68%;
-    height: 320px;
-    /* background: gray; */
+    /* height: 320px; */
+    height: 283px;
+    /*background: gray;*/
 
     position: absolute;
     bottom: 0;
     left: 0;
 }
+
+
 
 #h1TituloP{
     color: #FFFFFF;
@@ -135,47 +155,67 @@ a{
     font-weight: 100;
     line-height: 1.3;
 
-    /* background: red; */
+    /*background: red;*/
 }
 
 .divDetalle{
-    /* background: violet; */
+    /*background: violet;*/
     margin-left: 60px;
-    height: 224px;
+    height: 274px; /*224 posible error*/ 
+    
 }
 
 .divDPS{
-    /* background: green; */
+    /*background: green;*/
     height: 157px;
     display: flex;
     padding-top: 10px;
+    
+    /*width: 100%;*/ /*psible error*/
+    width: 372px;
 }
 
 .divDPSB{
-    /* background: orange; */
+    /*background: orange;*/
     padding-left: 12px;
+    
 }
 
 #divSinopsis{
-    /* background: gray; */
+    /*background: gray;*/
     height: 127px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 240px;
 }
 
 /*arreglar*/
+/*
 img{
     width: 150px;
     height: 100%;
     border-radius: 10px;
     box-shadow: 0px 0px 20px #000000;
 }
-/* 
-p{
-    height: 80%;
-} */
+*/
+
+
+.imgPortada{
+    /*width: 150px;
+    height: 160px;*/
+    
+    width: 110px;
+    height: 160px;
+    
+    object-fit: center;
+    object-position: center;
+    
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #000000;
+}
+
 
 button{
     height: 20%;
@@ -313,9 +353,22 @@ button{
 
 /*CUERPO COMPRA*/
 
+.aFecha{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    
+    font-weight: 100;
+    font-size: 12px;
+    /* color: #FFFFFF; */
+    color: rgba(255, 255, 255, 0.5);
+    
+}
+
 .divDegradadoCompra{
     background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 22%, rgba(0, 0, 0, 0.5) 42%, rgba(0, 0, 0, 0.4) 64%, rgba(0, 0, 0, 0.9) 100%);
-    height: 100%
+    height: 100%;
 }
 
 #divContenedorAsientos{
@@ -342,8 +395,10 @@ button{
 }
 
 .imgCompra{
-    height: 60%;
-    width: auto;
+    /*height: 60%;*/
+    height: 350px;
+    /*width: auto;*/
+    width: 240px;
     border-radius: 10px;
 
     margin-left: 40px;
@@ -357,8 +412,87 @@ button{
     height: 100%;
 }
 
+
+/*HORARIOS*/
+.divCompraH{
+    height: 15%;
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    /* color: #FFFFFF; */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.h4Fecha{
+    color: #FFFFFF;
+    margin-bottom: 3px;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.divCompraFecha{
+    /* background: green; */
+    width: 50%;
+    height: 100%;
+}
+#div7Dias{
+    /* background: pink; */
+    width: 100%;
+    display: flex;
+    gap: 14px;
+    flex-wrap: nowrap;
+
+    justify-content: left;
+    align-items: center;
+}
+
+.divDia{
+    /* background: orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+
+
+.divCompraHora{
+    /* background: blue; */
+    width: 50%;
+    height: 100%;
+}
+
+#div5Horas{
+    /* background: pink; */
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+
+    justify-content: left;
+    align-items: center;
+}
+.pDia{
+    margin-top: 3px;
+    padding: 5px;
+}
+
+.pDiaHoraS{
+    background: #DEB112;
+    margin-top: 3px;
+    padding: 5px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: #000000;
+}
+
+
 .divRellenoCA{
-    height: 20%;/*------------------------------------*/
+    height: 10%;/*------------------------------------*/
     width: 100%;
     /* background: red; */
 }
@@ -483,7 +617,7 @@ button{
 
 .divAsientosInfo{
     width: 100%;
-    height: 28%;/*------------------------------------*/
+    height: 23%;/*------------------------------------*/
     /* background-color: purple; */
 
     padding-top: 2%;
@@ -563,6 +697,7 @@ button{
 
     font-size: 12px;
     font-weight: 600;
+    
 }
 
 
@@ -620,6 +755,9 @@ label{
     font-size: 12px;
 
     font-weight: 300;
+    
+    
+    /*background: green;*/
 }
 
 input{
@@ -643,6 +781,7 @@ input{
 }
 
 .divCajaApellidos{
+    /*background: red;*/
     width: 48%;
 }
 
@@ -761,4 +900,16 @@ select{
     width: 100%;
     height: 100%;
     opacity: 0;
+}
+
+
+
+/*PUBLICAR FUNCIONES*/
+
+#horaF{
+    width: 100%;
+}
+
+#cajaFF{
+    margin-right: 20px;
 }

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : crearc
-    Created on : 24 may de 2024, 12:07:50
-    Author     : JAVIER APAZA
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -33,7 +28,8 @@
 
                             <h2 id="tituloLogin">Crear <span>cuenta</span></h2>
 
-                            <form action="" method="post">
+                            <form action="ControladorUsuario" method="post">
+                                <input type="hidden" name="id">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" name="nombre" id="nombre">
 
@@ -54,7 +50,7 @@
                                 <label for="email">Email</label>
                                 <input type="text" name="email" id="email">
                                 <label for="contraseña">Contraseña</label>
-                                <input type="password" name="contraseña" id="contraseña">
+                                <input type="password" name="contrasena" id="contraseña">
 
                                 <div class="divFormBotones">
                                     <a href="iniciarc.jsp" class="aCuenta" id="aIiniciarC">Ya tengo una cuenta</a>
